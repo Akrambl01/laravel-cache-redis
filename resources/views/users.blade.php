@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">User List (Cached)</h2>
+    <h2 style="text-align: center;">User List</h2>
 
     <div style="text-align: center; margin-bottom: 10px;">
         <a href="/clear-users-cache">Clear Cache</a>
