@@ -20,10 +20,6 @@
 <body>
     <h2 style="text-align: center;">User List (Cached)</h2>
 
-    @if(session('status'))
-        <p style="text-align: center; color: green;">{{ session('status') }}</p>
-    @endif
-
     <div style="text-align: center; margin-bottom: 10px;">
         <a href="/clear-users-cache">Clear Cache</a>
     </div>
