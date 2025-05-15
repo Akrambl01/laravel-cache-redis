@@ -18,7 +18,13 @@
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">User List</h2>
+    <h2 style="text-align: center;">User List (Cached)</h2>
+
+    @if(session('status'))
+        <p style="text-align: center; color: green;">{{ session('status') }}</p>
+    @endif
+
+    <p style="text-align: center;">Loaded in <strong>{{ $duration }}ms</strong></p>
 
     <div style="text-align: center; margin-bottom: 10px;">
         <a href="/clear-users-cache">Clear Cache</a>
@@ -34,8 +40,8 @@
             @foreach($users as $user)
             <tr>
                 <td>{{ $user->id }}</td>
-                <td>{{ $user->name }}</td> 
-                <td>{{ $user->email }}</td> 
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
             </tr>
             @endforeach
         </tbody>

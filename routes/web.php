@@ -12,6 +12,9 @@ Route::get('/', function () {
 Route::get('/users', [UserController::class, 'index']);
 
 Route::get('/clear-users-cache', function () {
-    Redis::del('users.list');
-    return response()->json(['status' => 'Cache cleared!']);
+    //? cache facade:
+    Cache::forget('users.list');
+    //? with redis facade
+    // Redis::del('users.list');
+    return redirect('/users')->with('status', 'Cache cleared!');
 });
